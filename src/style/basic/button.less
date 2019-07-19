@@ -1,0 +1,65 @@
+
+.btn-default-ghost {
+    background-color: #fff;
+    border-color: #4e73ca;
+    color: #4e73ca;
+    &:hover {
+        background-color: #6081cf;
+        color: #ffffff;
+    }
+    &:active {
+        background-color: #4667b5;
+        color: #ffffff;
+    }
+    &.disabled {
+        background-color: #dee0e5;
+        color: #c0c2c5;
+        border-color: #dee0e5;
+    }
+}
+
+.btn-normal {
+    line-height: 34px;
+}
+.btn-normal.btn-default-ghost {
+    line-height: 34px;
+}
+
+.btn {
+    padding: 0 20px;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: all .2s;
+    box-sizing: border-box;
+    vertical-align: middle;
+    touch-action: manipulation;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid;
+    white-space: nowrap;
+    .btn-normal;
+    &.disabled {
+        cursor: not-allowed;
+    }
+
+    &.btn-default {
+        background-color: #4e73ca;
+        border-color: #4e73ca;
+        color: #fff;
+        &:hover {
+            background-color: #6081cf;
+            border-color: #6081cf;
+        }
+        &:active {
+            background-color: #4667b5;
+            border-color: #4667b5;
+        }
+        &.disabled {
+            background-color: #dee0e5;
+            border-color: #dee0e5;
+            color: #c0c2c5;
+        }
+    }
+}

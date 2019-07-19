@@ -1,0 +1,147 @@
+.input-number {
+    position: relative;
+    overflow: hidden;
+    .form-border();
+    border-radius: 4px;
+    transition: all .5s;
+    &.focus {
+        .form-border-focus();
+    }
+    .input-number__decrease, .input-number__increase {
+        position: absolute;
+        z-index: 1;
+        width: 40px;
+        text-align: center;
+        background: @color-bg-dark-gray;
+        color: @color-base-gray;
+        cursor: pointer;
+        font-size: 13px;
+        height: 100%;
+        display: inline-block;
+        i {
+            font-size: 20px;
+            font-style: normal;
+            width: 40px;
+            height: 36px;
+            line-height: 34px;
+            display: inline-block;
+            user-select: none;
+        }
+    }
+    .input-number__decrease {
+        border-right: 1px solid @formNormalBorderColor;
+        border-radius: 4px 0 0 4px;
+    }
+    .input-number__increase {
+        right: 0;
+        border-left: 1px solid @formNormalBorderColor;
+        border-radius: 0 4px 4px 0;
+    }
+    .input-number__decrease:hover, .input-number__increase:hover {
+        color: @color-dark-gray;
+    }
+    .is-disabled {
+        cursor: not-allowed;
+        color: @formDisabledColor;
+        background-color: @formDisabledBGColor;
+    }
+    .el-input {
+        .content {
+            display: block;
+            line-height: 36px;
+            padding-left: 46px ;
+            padding-right: 46px;
+            border: none;
+            text-align: center;
+        }
+    }
+    .el-input.is-disabled {
+        .content {
+            cursor: not-allowed;
+            user-select: none;
+        }
+    }
+}
+.input-number.disabled {
+    cursor: not-allowed;
+}
+.input-number-small {
+    width: 120px !important;
+    .el-input {
+        width: 100%;
+        .content {
+            display: inline-block;
+            width: 100%;
+            line-height: 36px;
+            height: 36px;
+            padding-left: 34px ;
+            padding-right: 34px;
+            box-sizing: border-box;
+        }
+    }
+    .input-number__decrease, .input-number__increase {
+        width: 30px;
+        i {
+            font-size: 20px;
+            width: 30px;
+            height: 28px;
+            line-height: 26px;
+        }
+    }
+}
+.input-number-middle {
+    width: 130px !important;
+    .el-input {
+        width: 100%;
+        .content {
+            display: inline-block;
+            width: 100%;
+            line-height: 36px;
+            height: 36px;
+            padding-left: 40px ;
+            padding-right: 40px;
+            box-sizing: border-box;
+        }
+    }
+    .input-number__decrease, .input-number__increase {
+        width: 33px;
+        i {
+            font-size: 20px;
+            width: 33px;
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}
+.input-number-large {
+    width: 200px !important;
+    .el-input {
+        width: 100%;
+        .content {
+            display: inline-block;
+            width: 100%;
+            line-height: 36px;
+            height: 36px;
+            padding-left: 46px ;
+            padding-right: 46px;
+            box-sizing: border-box;
+        }
+    }
+    .input-number__decrease, .input-number__increase {
+        width: 37px;
+        i {
+            font-size: 25px;
+            width: 37px;
+            height: 34px;
+            line-height: 34px;
+        }
+    }
+}
+.form-control.error {
+    .input-number {
+        .form-border-error();
+        &.focus {
+            .form-border-error-focus();
+        }
+    }
+}

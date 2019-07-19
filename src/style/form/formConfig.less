@@ -1,0 +1,51 @@
+// 普通文字设置
+@formNormalColor: #292e42;
+@formNormalSize: 14px;
+@formSmSize: 12px;
+
+// 表单初始化文字颜色
+@formInitColor: #aeb3ba;
+
+// 默认表单边框颜色
+@formNormalBorderColor: #e1e3e6;
+
+// 激活状态表单边框颜色
+@formActiveBorderColor: #4e73ca;
+
+// 表单禁用状态文字和北京颜色
+@formDisabledColor: #aeb3ba;
+@formDisabledBGColor: #f8f9fb;
+
+// 表单下拉列表选中颜色
+@formSelectBGColor: #eff3fd;
+
+// 表单下拉列表悬停颜色
+@formSelectHoverColor: #f9fafc;
+
+// 表单下拉列表禁用文字颜色
+@formSelectDisabledColor: #dcdcdc;
+
+@formDangerousColor: #f23d58;
+@formSuccessColor: #59d39b;
+
+// 表单通用padding数值
+@formPadding: 10px;
+
+
+// 通用表单边框
+.form-border {
+    border: 1px solid @formNormalBorderColor
+}
+.form-border-focus {
+    border-color: @formActiveBorderColor;
+    box-shadow: 0 0 5px @formActiveBorderColor;
+}
+.form-border-error {
+    border-color: @formDangerousColor;
+}
+.form-border-error-focus {
+    box-shadow: 0 0 5px @formDangerousColor;
+}
+
+
+

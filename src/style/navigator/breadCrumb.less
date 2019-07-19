@@ -1,0 +1,25 @@
+.bread-crumb{
+    position: relative;
+    overflow: hidden;
+    .crumb-list{
+        .crumb-item{
+            display: inline-block;
+            font-size: 0;
+            a{
+                font-size: @small-fontsize;
+                color: @curmb-color;
+                &:hover{
+                    color: @color-main;
+                }
+            }
+            &:last-child a{
+                color: @curmb-cur-color;
+            }
+            .split-symbol{
+                font-size: @small-fontsize;
+                color: @curmb-color;
+                margin: 0 6px;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+    .popover{
+        min-width: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: @popoverBgColor;
+        color: white;
+        opacity: 0;
+        transition: opacity .3s ease-in,visibility .3s ease-in;
+        z-index: 999;
+        border-radius: 6px;
+        padding: 10px;
+        box-sizing: border-box;
+        &.top:after{
+            content:"";
+            position: absolute;
+            left: 50%;
+            bottom: -@popoverArrowSize;
+            width: 0;
+            height: 0;
+            border-top: @popoverArrowSize solid @popoverBgColor;
+            border-left: @popoverArrowSize solid transparent;
+            border-right: @popoverArrowSize solid transparent;
+            transform: translate3d(-50%,0,0);           
+        }
+        &.top-left:after,&.bottom-left:after{
+            left: 20% !important;
+        }
+        &.bottom:after{
+            content:"";
+            position: absolute;
+            left: 50%;
+            top: -@popoverArrowSize;
+            width: 0;
+            height: 0;
+            border-bottom: @popoverArrowSize solid @popoverBgColor;
+            border-left: @popoverArrowSize solid transparent;
+            border-right: @popoverArrowSize solid transparent;
+            transform: translate3d(-50%,0,0);           
+        }
+        &.top-right:after,&.bottom-right:after{
+            left: 85% !important;
+        }
+    }
+    .popover.bottom:after{
+        content:"";
+        position: absolute;
+        left: 50%;
+        top: -12px;
+        width: 0;
+        height: 0;
+        border-bottom: 12px solid rgba(0,0,0,0.8);
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        transform: translate3d(-50%,0,0);
+    }

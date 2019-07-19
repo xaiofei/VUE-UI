@@ -1,0 +1,32 @@
+.input-range {
+    height: 36px;
+    line-height: 36px;
+    .input-range-text {
+        width: auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+        height: 100%;
+        .form-border();
+        border-radius: 2px;
+        background: transparent;
+        font-size: 14px;
+        color: @formNormalColor;
+        transition: all .5s;
+        &:focus {
+            .form-border-focus();
+        }
+        &[disabled] {
+            cursor: not-allowed;
+        }
+    }
+}
+.form-control.error {
+    .input-range {
+        .input-range-text {
+            .form-border-error();
+            &:focus {
+                .form-border-error-focus();
+            }
+        }
+    }
+}

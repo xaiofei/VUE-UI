@@ -1,0 +1,36 @@
+.input-item {
+    height: 80px; 
+    &.require {
+        .input-title label:before {
+            content: "*";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            color: #d33;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+    .input-title {
+        width: 10%;
+        font-size: 16px;
+        white-space: nowrap;
+        text-align: right;
+        &.notitle {
+            label {
+            display: none;
+            }
+        }
+        label {
+            display: block;
+            position: relative;
+            margin: 0 1em 0 .5em;
+            color: #999;
+            padding-left: 10px;
+            &:after {
+                content: ":";
+            }
+        }
+    }
+}

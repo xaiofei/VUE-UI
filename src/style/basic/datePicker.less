@@ -1,0 +1,185 @@
+.picker {
+    width: 200px;
+    position: relative;
+    user-select: none;
+    div, input {
+        box-sizing: border-box;
+    }
+    .picker-text {
+        width: 100%;
+        height: 36px;
+        line-height: 34px;
+        .form-border();
+        border-radius: 2px;
+        position: relative;
+        transition: border-color .5s;
+        &.focus {
+            .form-border-focus();
+        }
+        &.disabled {
+            cursor: not-allowed;
+            input,
+            .picker-icon {
+                cursor: not-allowed;
+            }
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            padding: 0 10px 0 30px;
+            vertical-align: top;
+        }
+        .picker-icon {
+            color: @formDisabledColor;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+    .picker-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 10px;
+        box-shadow: 0 0 8px @formNormalBorderColor;
+        background-color: #fff;
+        z-index: 99;
+    }
+    .picker-item {
+        width: 262px;
+        height: auto;
+        padding: 19px;
+    }
+    .picker-preview {
+        width: 100%;
+        line-height: 24px;
+        text-align: center;
+        color: @formNormalColor;
+        position: relative;
+        .picker-preview-text {
+            width: 100%;
+            padding: 0 48px;
+            span {
+                cursor: pointer;
+            }
+            span:hover {
+                color: @color-main;
+            }
+        }
+        .picker-preview-icon {
+            width: 24px;
+            display: inline-block;
+            color: @formDisabledColor;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            &.double-left {
+                left: 0;
+            }
+            &.double-right {
+                right: 0;
+            }
+            &.single-left {
+                left: 24px;
+            }
+            &.single-right {
+                right: 24px;
+            }
+        }
+    }
+    .picker-year,
+    .picker-month {
+        .picker-options {
+            overflow: hidden;
+            text-align: center;
+            color: @formDisabledColor;
+        }
+        .picker-option {
+            width: 25%;
+            float: left;
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 20px 0;
+            cursor: pointer;
+            &.active,
+            &:hover {
+                color: @formActiveBorderColor;
+            }
+        }
+    }
+    .picker-day {
+        .picker-day-options {
+            overflow: hidden;
+            text-align: center;
+        }
+        .picker-day-title,
+        .picker-day-option {
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            float: left;
+        }
+        .picker-day-title {
+            color: @formDisabledColor;
+        }
+        .picker-day-option {
+            border-radius: 50%;
+            color: @formNormalColor;
+            cursor: pointer;
+            &.today {
+                color: @formActiveBorderColor;
+            }
+            &.disabled {
+                cursor: not-allowed;
+            }
+            &.disabled,
+            &.not-month {
+                color: @formDisabledColor;
+            }
+            &.active,
+            &:hover {
+                color: #fff;
+                background-color: @formActiveBorderColor;
+            }
+            &.not-month:hover,
+            &.disabled:hover {
+                color: @formDisabledColor;
+                background-color: transparent;
+            }
+        }
+    }
+    .picker-time {
+        height: 22px;
+        line-height: 22px;
+        margin-top: 5px;
+        .picker-time-label {
+            padding: 0 10px;
+        }
+        .picker-time-input {
+            width: 32px;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0 5px;
+            border: 1px solid @formNormalBorderColor;
+            border-radius: 4px;
+            display: inline-block;
+            transition: border-color .5s;
+            text-align: center;
+            &:focus {
+                border-color: @formActiveBorderColor;
+            }
+        }
+    }
+}
+.form-control.error {
+    .picker {
+        .picker-text {
+            .form-border-error();
+            &.focus {
+                .form-border-error-focus();
+            }
+        }
+    }
+}

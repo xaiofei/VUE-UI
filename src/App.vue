@@ -47,8 +47,6 @@ export default {
                     path:route.path
                 }
             });
-
-            console.log(matchedArr)
             return matchedArr;
         }
     }
@@ -81,7 +79,7 @@ export default {
         }
     	.view-panel{
     		position: relative;
-    		padding: 20px 40px;
+    		padding: 20px 30px;
     		transition: 0.15s;
     		margin-left: 210px;
     		box-sizing: border-box;
